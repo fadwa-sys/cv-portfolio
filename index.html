@@ -6,152 +6,78 @@
     <title>Portfolio - Fadwa Sasdi</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
-            --text-dark: #2d3436;
-            --primary-blue: #0984e3;
-            --card-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            --primary-color: #4a90e2;
+            --secondary-color: #f5f7fa;
+            --text-color: #333;
+            --accent-color: #27ae60;
         }
-
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 0; 
-            background-color: var(--bg-color); 
-            color: var(--text-dark); 
+            margin: 0; padding: 0;
+            background-color: #eef2f3;
+            color: var(--text-color);
+            line-height: 1.6;
         }
-
-        /* Barre de navigation style Rime */
-        nav {
-            background: white;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .header {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px 80px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .logo { font-weight: bold; color: var(--primary-blue); font-size: 1.2em; }
-
-        /* Section de présentation (Héro) */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-
-        .hero-text { flex: 1; padding-right: 50px; }
-        .hero-text h1 { font-size: 3em; margin: 0; color: #2d3436; }
-        .hero-text p { font-size: 1.2em; color: #636e72; margin: 20px 0; }
-
-        .hero-image { flex: 0 0 300px; }
-        .hero-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: var(--card-shadow);
+        .container {
+            max-width: 900px;
+            margin: -60px auto 40px;
+            padding: 0 20px;
         }
-
-        /* Boutons */
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn-main { background: var(--primary-blue); color: white !important; }
-        .btn-main:hover { opacity: 0.9; transform: scale(1.05); }
-
-        /* Sections de contenu */
-        .section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
         .card {
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: var(--card-shadow);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
-
-        h2 { font-size: 2em; margin-bottom: 30px; text-align: center; }
-        h3 { color: var(--primary-blue); }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: white;
-            margin-top: 50px;
-            color: #636e72;
+        h1 { margin: 0; font-size: 2.2em; }
+        h2 { color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            color: white !important;
         }
-
-        /* Responsive pour mobile */
-        @media (max-width: 768px) {
-            .hero { flex-direction: column-reverse; text-align: center; }
-            .hero-text { padding-right: 0; margin-top: 30px; }
-            nav { padding: 15px 20px; }
-        }
+        .btn-cv { background-color: var(--primary-color); }
+        .btn-kaggle { background-color: #20beff; }
+        .btn-project { background-color: var(--accent-color); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); opacity: 0.9; }
+        .footer { text-align: center; color: #7f8c8d; padding: 20px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">FADWA SASDI</div>
-        <div class="nav-links">MARKETING DIGITAL</div>
-    </nav>
+    <header class="header">
+        <img src="photo.jpg" alt="Fadwa Sasdi" class="profile-img">
+        <h1>Fadwa Sasdi</h1>
+        <p>Étudiante en 2ème année Marketing Digital et Commercial</p>
+    </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <span style="color: var(--primary-blue); font-weight: bold;">Future Experte Marketing</span>
-            <h1>Fadwa Sasdi</h1>
-            <p>Étudiante passionnée en Marketing Digital et Commerce. J'apprends à transformer les données en stratégies e-commerce efficaces.</p>
-            <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn btn-main">Mon CV (PDF)</a>
-        </div>
-        <div class="hero-image">
-            <img src="photo.jpg" alt="Fadwa Sasdi" onerror="this.src='https://via.placeholder.com/300x400?text=Ma+Photo'">
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Mon Parcours & Compétences</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Formation</h3>
-                <p><strong>2ème année Marketing Digital</strong></p>
-                <p>Apprentissage de l'analyse de données, du e-commerce et des stratégies de communication numérique.</p>
-            </div>
-            <div class="card">
-                <h3>Compétences</h3>
-                <p>Analyse de données (Python/Kaggle), Marketing sur les réseaux sociaux et gestion de projets digitaux.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Mes Projets Data</h2>
-        <div class="card" style="text-align: center;">
-            <h3>Projet : Analyse Marketing (Kaggle)</h3>
-            <p>Analyse des comportements d'achat réalisée avec Python.</p>
-            <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank" class="btn btn-main" style="background-color: #00b894;">Voir mon projet Kaggle</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Fadwa Sasdi — Créé avec passion pour mon Portfolio</p>
-    </footer>
-
-</body>
-</html>
+    <div class="container">
+        <div class="card">
+            <h2>À propos de moi</h2>
+            <p>Passionnée par l'analyse de données et le E-commerce. Actuellement à la recherche d'un stage pour mettre mes compétences au service d'une entreprise innovante.</p>
+            
+            <div class="btn-group">
+                <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn btn-cv">📄 Mon CV (PDF)</a>
