@@ -5,87 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Fadwa Sasdi</title>
     <style>
-        :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #f5f7fa;
-            --text-color: #333;
-            --accent-color: #27ae60;
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #f4f7f6; color: #333; }
+        .header { background: #2c3e50; color: white; text-align: center; padding: 40px 20px; }
+        
+        /* Style pour la photo comme le site de Rime */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 15px;
+            object-fit: cover;
         }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 0;
-            background-color: #eef2f3;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .container {
-            max-width: 900px;
-            margin: -40px auto 40px;
-            padding: 0 20px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        h1 { margin: 0; font-size: 2.5em; }
-        h2 { color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
-        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
-        .btn {
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
+
+        .container { max-width: 800px; margin: -30px auto 40px; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        h1 { margin: 10px 0; font-size: 2em; }
+        .subtitle { font-style: italic; color: #ecf0f1; margin-bottom: 20px; }
+        
+        .btn { 
+            display: inline-block; 
+            padding: 12px 20px; 
+            margin: 10px 5px; 
+            border-radius: 5px; 
+            text-decoration: none; 
             font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
+            transition: 0.3s;
         }
-        .btn-cv { background-color: var(--primary-color); color: white !important; }
-        .btn-kaggle { background-color: #20beff; color: white !important; }
-        .btn-project { background-color: var(--accent-color); color: white !important; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); opacity: 0.9; }
-        .footer { text-align: center; color: #7f8c8d; padding: 20px; font-size: 0.9em; }
-        hr { border: none; height: 1px; background-color: #eee; margin: 25px 0; }
+        .btn-blue { background: #3498db; color: white !important; }
+        .btn-green { background: #27ae60; color: white !important; }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
+        
+        .section-title { border-left: 5px solid #3498db; padding-left: 15px; color: #2c3e50; }
+        footer { text-align: center; padding: 20px; color: #7f8c8d; }
     </style>
 </head>
 <body>
 
-    <header class="header">
+    <div class="header">
+        <img src="photo.jpg" alt="Fadwa Sasdi" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
         <h1>Fadwa Sasdi</h1>
-        <p>Étudiante en 2ème année Marketing Digital et Commercial</p>
-    </header>
+        <div class="subtitle">Étudiante en 2ème année Marketing Digital et Commercial</div>
+    </div>
 
     <div class="container">
         <div class="card">
-            <h2>À propos de moi</h2>
-            <p>Passionnée par l'analyse de données et le E-commerce. Actuellement à la recherche d'un stage pour mettre mes compétences en Marketing Digital au service d'une entreprise innovante.</p>
-            
-            <div class="btn-group">
-                <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn btn-cv">📄 Mon CV (PDF)</a>
-                <a href="https://www.kaggle.com/fadwasasdi" target="_blank" class="btn btn-kaggle">📊 Profil Kaggle</a>
+            <h2 class="section-title">Présentation</h2>
+            <p>Passionnée par l'analyse de données et le E-commerce. Actuellement à la recherche d'un stage pour mettre mes compétences en Marketing Digital au service de vos projets.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Documents & Profils</h2>
+            <div style="text-align: center;">
+                <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn btn-blue">📄 Mon CV (PDF)</a>
+                <a href="https://www.kaggle.com/fadwasasdi" target="_blank" class="btn btn-blue">📊 Profil Kaggle</a>
             </div>
         </div>
 
         <div class="card">
-            <h2>Mes Projets</h2>
-            <h3>Analyse Marketing & Data Science</h3>
-            <p>Utilisation de Python pour analyser les comportements d'achat et visualiser les tendances de consommation.</p>
-            <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank" class="btn btn-project">🚀 Voir le projet Kaggle</a>
+            <h2 class="section-title">Projet Data Science</h2>
+            <h3>Analyse Marketing sur Kaggle</h3>
+            <p>Analyse des comportements clients avec Python.</p>
+            <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank" class="btn btn-green">🚀 Voir l'analyse complète</a>
         </div>
 
-        <footer class="footer">
-            © 2026 - Créé par Fadwa Sasdi - Portfolio Marketing Digital
+        <footer>
+            © 2026 Fadwa Sasdi | Portfolio Marketing Digital
         </footer>
     </div>
 
 </body>
 </html>
+     
