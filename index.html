@@ -3,78 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Web - Fadwa Sasdi</title>
-    <style>
-        :root {
-            --primary: #4a90e2;
-            --dark: #2c3e50;
-            --light: #f4f7f6;
-        }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 0; background-color: var(--light); color: var(--dark); 
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #357abd 100%);
-            color: white; text-align: center; padding: 50px 20px;
-        }
-        .profile-img {
-            width: 150px; height: 150px; border-radius: 50%;
-            border: 5px solid white; object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-bottom: 15px;
-        }
-        .container { max-width: 800px; margin: -50px auto 40px; padding: 0 20px; }
-        .card {
-            background: white; padding: 30px; border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 25px;
-        }
-        h1 { margin: 10px 0; font-size: 2.2rem; }
-        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 8px; }
-        .info-job { font-size: 1.2rem; font-weight: bold; opacity: 0.9; }
-        .btn-box { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
-        .btn {
-            padding: 12px 25px; border-radius: 25px; text-decoration: none;
-            font-weight: bold; color: white !important; transition: 0.3s;
-            display: inline-block;
-        }
-        .btn-cv { background-color: #e67e22; } /* Orange pour le CV */
-        .btn-kaggle { background-color: #20beff; } /* Bleu Kaggle */
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9rem; }
-    </style>
+    <title>Portfolio - Fadwa Sasdi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
+    <div class="main-card">
         <img src="photo.jpg" alt="Fadwa Sasdi" class="profile-img">
         <h1>Fadwa Sasdi</h1>
-        <p class="info-job">Étudiante en 2ème année Marketing Digital et Commercial</p>
-    </header>
+        <p class="subtitle">Étudiante en 2ème année Marketing Digital et Commercial</p>
 
-    <div class="container">
-        <div class="card">
-            <h2>Profil Professionnel</h2>
-            <p>Passionnée par l'analyse de données et le E-commerce. Actuellement à la recherche d'un stage pour mettre mes compétences au service d'une entreprise innovante.</p>
-            
-            <div class="btn-box">
-                <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn btn-cv">📄 Télécharger mon CV (PDF)</a>
-                <a href="https://www.kaggle.com/fadwasasdi" target="_blank" class="btn btn-kaggle">📊 Mon Profil Kaggle</a>
+        <section>
+            <h2>Mon CV et Profils</h2>
+            <div class="links">
+                <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn">📄 CV (PDF)</a>
+                <a href="https://www.kaggle.com/fadwasasdi" target="_blank" class="btn">📊 Kaggle</a>
             </div>
-        </div>
+        </section>
 
-        <div class="card">
-            <h2>Projets & Analyses</h2>
-            <h3>Analyse Marketing (Kaggle)</h3>
-            <p>Étude des comportements d'achat réalisée avec Python et visualisation de données.</p>
-            <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank" style="color: var(--primary); font-weight: bold;">
-                👉 Voir l'analyse complète sur Kaggle
-            </a>
-        </div>
+        <section>
+            <h2>Mes Projets</h2>
+            <div class="project-box">
+                <h3>Analyse Marketing (Python)</h3>
+                <p>Analyse des comportements d'achat réalisée sur Kaggle.</p>
+                <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank">Voir le projet →</a>
+            </div>
+        </section>
 
         <footer>
-            © 2026 Fadwa Sasdi - Tous droits réservés
+            <p>© 2026 - Fadwa Sasdi</p>
         </footer>
     </div>
-
 </body>
 </html>
