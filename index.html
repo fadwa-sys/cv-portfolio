@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Premium - Fadwa Sasdi</title>
+    <title>CV Portfolio - Fadwa Sasdi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="background">
-        <span></span><span></span><span></span><span></span><span></span>
-    </div>
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
 
-    <div class="glass-card">
-        <div class="profile-header">
-            <img src="photo.jpg" alt="Fadwa Sasdi" class="avatar">
+    <div class="background-animation"></div>
+
+    <div class="glass-container">
+        <header>
+            <img src="photo.jpg" alt="Fadwa Sasdi" class="profile-pic">
             <h1>Fadwa Sasdi</h1>
-            <p class="tag">Étudiante Marketing Digital (2ème année)</p>
+            <p class="subtitle">Marketing Digital & Data Translation</p>
+        </header>
+
+        <div class="contact-bar">
+            <span><i class="fas fa-envelope"></i> fadwasasdi@gmail.com</span>
+            <span><i class="fas fa-phone"></i> 0690238881</span>
         </div>
 
-        <div class="contact-grid">
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>fadwasasdi@gmail.com</span>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>+212 6 00 00 00 00</span>
-            </div>
+        <div class="languages">
+            <span class="badge">FR</span>
+            <span class="badge">ENG</span>
+            <span class="badge">AR</span>
         </div>
 
-        <div class="action-buttons">
-            <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn primary">
-                <i class="fas fa-file-pdf"></i> Mon CV
+        <div class="main-buttons">
+            <a href="CV__FADWA_SASDI.pdf" target="_blank" class="btn-main pulse">
+                <i class="fas fa-file-download"></i> Mon CV PDF
             </a>
-            <a href="https://www.kaggle.com/fadwasasdi" target="_blank" class="btn secondary">
-                <i class="fab fa-kaggle"></i> Kaggle
+            <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank" class="btn-main secondary">
+                <i class="fab fa-kaggle"></i> Projet Kaggle
             </a>
         </div>
 
-        <div class="project-section">
-            <h2><i class="fas fa-chart-line"></i> Mon Projet Data Science</h2>
-            <div class="project-preview">
-                <p>Analyse Marketing Python - Kaggle</p>
-                <a href="https://www.kaggle.com/code/fadwasasdi/notebookf179af34d3" target="_blank">Ouvrir l'analyse</a>
-            </div>
-        </div>
-
-        <footer>© 2026 Fadwa Sasdi</footer>
+        <footer>
+            <p>Design Créatif • 2026</p>
+        </footer>
     </div>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+    </script>
 </body>
 </html>
