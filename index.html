@@ -1,81 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Fadwa Sasdi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portfolio Fadwa</title>
     <style>
-        :root {
-            --primary: #0984e3;
-            --dark: #2d3436;
-            --light: #f9f9f9;
-        }
-
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; padding: 0; 
-            background-color: #f1f2f6; 
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        /* Animation d'apparition */
-        .fade-in {
-            animation: fadeInAnim 1.5s ease-out;
-        }
-
-        @keyframes fadeInAnim {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Navigation */
-        nav {
-            background: white;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo { font-weight: bold; color: var(--primary); font-size: 1.2em; }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-            gap: 40px;
-        }
-
-        .hero-text { flex: 1; min-width: 300px; }
-        .hero-text h1 { font-size: 3em; margin: 10px 0; }
-        
-        .hero-image img {
-            width: 280px;
-            height: 380px;
-            border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border: 5px solid white;
-        }
-
-        /* Cartes de contenu */
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .contact-box {
-            display: grid;
+        body { font-family: sans-serif; text-align: center; background: #f4f4f4; padding: 50px; }
+        .card { background: white; padding: 40px; border-radius: 20px; display: inline-block; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        img { width: 200px; border-radius: 20px; }
+        h1 { color: #0984e3; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="photo.jpg" alt="Fadwa" onerror="this.src='https://via.placeholder.com/200'">
+        <h1>Fadwa Sasdi</h1>
+        <p>Étudiante en Marketing Digital - EST Salé</p>
+        <p>Email: fadwasasdi@gmail.com | Tél: +212 6 90 23 88 81</p>
+        <a href="CV__FADWA_SASDI.pdf">Voir mon CV PDF</a>
+    </div>
+</body>
+</html>
